@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Sitio{% endblock %}</title>
+
+    <style>
+        /* ======== Estilos Globales ======== */
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background: linear-gradient(120deg, #e0f7fa, #fff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        main {
+            max-width: 600px;
+            background: white;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: #f1f1f1;
+            text-align: center;
+            padding: 1.5rem;
+            color: #333;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            border-top: 3px solid #0077b6;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        /* ======== Formularios ======== */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        input:focus, select:focus {
+            border-color: #0077b6;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,119,182,0.3);
+        }
+
+        button {
+            padding: 0.7rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button[type="submit"] {
+            background: #0077b6;
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background: #0096c7;
+        }
+
+        button[type="reset"] {
+            background: #e0e0e0;
+        }
+
+        button[type="reset"]:hover {
+            background: #bdbdbd;
+        }
+
+        /* ======== Datos ======== */
+        h1, h2 {
+            text-align: center;
+        }
+
+        p {
+            background: #f8f9fa;
+            padding: 0.7rem;
+            border-radius: 8px;
+            border-left: 4px solid #0077b6;
+        }
+
+        .no-datos {
+            text-align: center;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>Registro de Equipos</header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p><strong>© 2025 - Sistema de Registro de Equipos</strong></p>
+        <p>Estudiante: <strong>Chambi Cahuana Brian Arturo</strong> — CI: <strong>8373817</strong></p>
+        <p>Estudiante: <strong>Uzquiano Villacorta Omar</strong> — CI: <strong>12924161</strong></p>
+        <p>Estudiante: <strong>Gutierrez Herrera Mayra Fabiola</strong> — CI: <strong>13789973</strong></p>
+        <p>Estudiante: <strong>Herrera Bonilla Thaime Helen</strong> — CI: <strong>12394581</strong></p>
+        <p>Estudiante: <strong>Colque Huchani Jhesica Laura</strong> — CI: <strong>12768305</strong></p>
+    </footer>
+</body>
+</html>

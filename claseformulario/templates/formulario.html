@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Registro de Equipo{% endblock %}
+
+{% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <h2>Registro de Equipo</h2>
+
+    <label for="nombredeequipo">Nombre de equipo:</label>
+    <input type="text" name="nombredeequipo" id="nombredeequipo" required>
+
+    <label for="nombreJefe">Nombre del jefe:</label>
+    <select name="nombredejefe" id="nombreJefe" required>
+      <option value="">-- Selecciona un jefe --</option>
+      <option value="Chambi Cahuana Brian Arturo">Chambi Cahuana Brian Arturo</option>
+      <option value="Uzquiano Villacorta Omar">Uzquiano Villacorta Omar</option>
+      <option value="Gutierrez Herrera Mayra Fabiola">Gutierrez Herrera Mayra Fabiola</option>
+      <option value="Herrera Bonilla Thaime Helen">Herrera Bonilla Thaime Helen</option>
+      <option value="Colque Huchani Jhesica Laura">Colque Huchani Jhesica Laura</option>
+    </select>
+
+    <label for="membresia">Membresía:</label>
+    <input type="number" name="membresia" id="membresia" min="0" required>
+
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" name="cantidad" id="cantidad" min="1" required>
+
+    <div style="display: flex; gap: 1rem; justify-content: center;">
+      <button type="submit">Enviar</button>
+      <button type="reset">Cancelar</button>
+    </div>
+  </form>
+
+  {% if datos %}
+    <h1>Datos Recibidos:</h1>
+    <p>Nombre de equipo: {{ datos.nombredeequipo }}</p>
+    <p>Nombre del jefe: {{ datos.nombredejefe }}</p>
+    <p>Total: {{ datos.total }}</p>
+  {% else %}
+    <p class="no-datos">¡NO HAY DATOS!</p>
+  {% endif %}
+{% endblock %}
